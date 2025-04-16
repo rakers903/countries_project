@@ -19,7 +19,7 @@ class CountryRepositoryImpl: CountryRepository {
                     emit(UiState.ERROR(Exception("Body is null or empty")))
                 } else {
                     val countryModels = body.map {
-                        return@map CountryModel(
+                        CountryModel(
                             name = it.name,
                             region = it.region,
                             code = it.code,
