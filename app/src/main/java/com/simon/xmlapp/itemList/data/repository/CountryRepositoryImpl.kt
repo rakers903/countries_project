@@ -16,7 +16,7 @@ class CountryRepositoryImpl: CountryRepository {
             if(response.isSuccessful) {
                 val body = response.body()
                 if(body == null) {
-                    emit(UiState.ERROR(Exception("Body is null or empty")))
+                    emit(UiState.ERROR(Exception("Body is null")))
                 } else {
                     val countryModels = body.map {
                         CountryModel(
